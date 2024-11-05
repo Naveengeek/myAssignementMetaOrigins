@@ -1,0 +1,39 @@
+<template>
+    <!-- new lightning modal -->
+    <template lwc:if={showModal}>
+        <lightning-modal-header label="Submitted Patient details"></lightning-modal-header>
+        <lightning-modal-body> 
+            <p>Patient Name : <b>{formdetail.Name}</b> </p>
+            <p>Patient Id : <b>{formdetail.Patient_Id__c}</b> </p> 
+            <p>Is Elligible : <b>{isMedicalEligible}</b> </p> 
+            <p>Treatment Status : <b>{formdetail.Treatment_Status__c}</b> </p> 
+            <p>Diagnosis Doc Name : <b>{fileName}</b> </p> 
+        </lightning-modal-body>
+        <lightning-modal-footer>
+            <lightning-button label="OK" onclick={handleOkay}></lightning-button>
+        </lightning-modal-footer>
+    </template>
+
+    <template lwc:else>
+        <lightning-card>
+            <div class="slds-m-around_medium">
+                <lightning-input label="Patient Name" value={formdetail.Name} disabled=true></lightning-input>
+                <lightning-input label="Patient Id" value={formdetail.Patient_Id__c} disabled=true></lightning-input>
+                <lightning-input label="Patient Date of Birth" value={formdetail.DOB__c} disabled=true></lightning-input>
+                <lightning-input label="Patient Treatment Status" value={formdetail.Treatment_Status__c} disabled=true></lightning-input>
+                <lightning-input label="Upload Dignosis Document" type="file" accept=".pdf,.jpg,.png" onchange={handleFileChange} name={fileName}></lightning-input>
+                <template lwc:if={fileName}>
+                    <p style="color: green;">{fileName} uploaded Successfully!!!</p>
+                </template>
+                <template lwc:else>
+                    <p style="color: red;">{errorMessage}</p>
+                    
+                </template>
+                <br/><br/>
+                <lightning-input label="Patient medical eligibility" type="checkbox" checked={isMedicalEligible} onchange={handleCheckboxChange}></lightning-input>
+                <br/>
+                <lightning-button label="Submit" type="submit" onclick={handleSubmit} variant="brand"></lightning-button>
+            </div>
+        </lightning-card>
+    </template>
+</template>

@@ -1,0 +1,10 @@
+<template>
+    <template lwc:if={newnotification}>
+        <div onclick={handleUpdate} style="cursor: pointer">
+            <p> NOTIFICATIONS</p>
+            <div class="slds-m-around_large">
+                Patient Id : {newnotification.Patient_Id__c} Created success!
+            </div>
+        </div>
+    </template>
+</template>

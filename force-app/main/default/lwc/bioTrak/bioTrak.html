@@ -1,0 +1,22 @@
+<template>
+    <div class="slds-grid slds-wrap slds-gutters">
+        <div class="slds-col slds-size_1-of-3 slds-p-around_medium" style="background-color: #2596be; height: 700px">
+            <c-bio-trak-notification newnotification = {notification} onselectpatient = {handleUserRedirect}></c-bio-trak-notification>
+        </div>
+        <div class="slds-col slds-size_2-of-3 slds-p-around_medium">
+            <div class="button-container">
+                <lightning-button label="New Patient" onclick={handleButton1Click} disabled={disableCreateButton}></lightning-button>
+                <lightning-button label="Existing Patient" onclick={handleButton2Click}></lightning-button>
+            </div>
+            <div class="slds-m-around_medium">
+                <template lwc:if={showCreateForm}>
+                    <c-patient-form onsubmitevent = {handleSubmitForm}></c-patient-form>
+                </template>
+                <template lwc:elseif={showSubmitForm}>
+                    <c-bio-trak-submit-form formdetail = {notification}></c-bio-trak-submit-form>
+                </template>
+            </div>
+
+        </div>
+    </div>
+</template>

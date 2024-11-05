@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #2596be;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.site-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.icons-container {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-left: 15px;
+    cursor: pointer;
+    fill: black;
+}

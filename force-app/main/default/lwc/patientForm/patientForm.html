@@ -1,0 +1,49 @@
+<template>
+    <lightning-card title="Patient Registration Form">
+        <div class="slds-p-around_medium">
+            <lightning-record-edit-form
+                object-api-name="Patient__c"
+                onsuccess={handleSuccess}
+                onsubmit={handleSubmit}>
+                
+                <!-- Patient Name Field -->
+                <lightning-input-field
+                    field-name="Name"
+                    label="Patient Name"
+                    required>
+                </lightning-input-field>
+                
+                <!-- Patient ID Field (auto-generated) -->
+                <lightning-input-field
+                    field-name="Patient_Id__c"
+                    value={patientId}
+                    label="Patient ID"
+                    required
+                    disabled>
+                </lightning-input-field>
+
+                <!-- Patient DOB Field -->
+                <lightning-input-field
+                    field-name="DOB__c"
+                    label="Patient DOB"
+                    type="date"
+                    required>
+                </lightning-input-field>
+
+                <!-- Treatment Status Picklist -->
+                <lightning-input-field
+                    field-name="Treatment_Status__c"
+                    label="Patient Treatment Status"
+                    required>
+                </lightning-input-field>
+
+                <!-- Submit Button -->
+                <lightning-button
+                    type="submit"
+                    label="Submit"
+                    variant="brand">
+                </lightning-button>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>

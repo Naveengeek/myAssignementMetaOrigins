@@ -1,0 +1,11 @@
+<aura:component implements="forceCommunity:layout" description="Custom Blank Layout for Experience Site" >
+    <div class="slds-grid slds-gutters">
+        <!-- Main content area to insert LWCs -->
+        <div class="slds-col main-content">
+            <!-- This attribute is a placeholder for inserting custom components -->
+            <aura:html tag="div" HTMLAttributes="{ 'class' : 'slot-container' }">
+                {!v.body}
+            </aura:html>
+        </div>
+    </div>
+</aura:component>

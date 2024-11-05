@@ -1,0 +1,17 @@
+<template>
+    <header class="header">
+        <!-- Logo and Name -->
+        <div class="logo-container">
+            <img src={imageUrl} style="max-height: 200px" alt="Logo" class="logo" />
+            <span class="site-name">BIOTRAK</span>
+        </div>
+
+        <!-- Icons -->
+        <div class="icons-container">
+            <lightning-button-icon icon-name="utility:home" variant="border-inverse" alternative-text="Home" class="icon" onclick={navigateHome} ></lightning-button-icon>
+            <lightning-button-icon icon-name="utility:file" variant="border-inverse" alternative-text="File Search" class="icon" onclick={navigateFileSearch}></lightning-button-icon>
+            <lightning-button-icon icon-name="utility:notification" variant="border-inverse" alternative-text="Notifications" class="icon" onclick={navigateNotifications}></lightning-button-icon>
+            <lightning-button-icon icon-name="utility:user" variant="border-inverse" alternative-text="Profile" class="icon" onclick={navigateProfile}></lightning-button-icon>
+        </div>
+    </header>
+</template>
