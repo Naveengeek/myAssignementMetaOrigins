@@ -1,0 +1,6 @@
+.notifyBorders{
+    border: 2px solid black;      /* Black border with 2px thickness */
+    border-radius: 8px;           /* Light curve (adjust to your needs) */
+    padding: 10px;                /* Add padding inside the div */
+    margin: 10px;  
+}

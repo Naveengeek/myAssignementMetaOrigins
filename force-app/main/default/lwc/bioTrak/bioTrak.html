@@ -5,8 +5,8 @@
         </div>
         <div class="slds-col slds-size_2-of-3 slds-p-around_medium">
             <div class="button-container">
-                <lightning-button label="New Patient" onclick={handleButton1Click} disabled={disableCreateButton}></lightning-button>
-                <lightning-button label="Existing Patient" onclick={handleButton2Click}></lightning-button>
+                <lightning-button label="New Patient" onclick={handleNewPatient} disabled={disableCreateButton}></lightning-button>
+                <lightning-button label="Existing Patient" onclick={handleExistPatient}></lightning-button>
             </div>
             <div class="slds-m-around_medium">
                 <template lwc:if={showCreateForm}>

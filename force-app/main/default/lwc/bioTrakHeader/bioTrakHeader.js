@@ -4,7 +4,7 @@ export default class BioTrakHeader extends LightningElement {
     imageUrl = myImageResource;
     navigateHome() {
         // Logic for navigating to Home
-        console.log('Navigating to Home');
+        window.open('./',"_self")
     }
 
     navigateFileSearch() {
